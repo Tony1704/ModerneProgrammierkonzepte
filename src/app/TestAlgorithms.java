@@ -13,14 +13,15 @@ public class TestAlgorithms {
     public static void runTest() {
         int[] arr = new int[6000];
         int search = 10;
+        final int iterations = 100000;
 
         for (int i = 0; i < arr.length; i++) {
             arr[i] = i;
         }
 
-        double[] resultsFunctionalLinearSearch = functionalLinearSearchTest.test(arr, search);
-        double[] resultsOOLinearSearch = ooLinearSearchTest.test(arr, search);
-        double[] resultsQuickSort = quicksortTets.test(arr);
+        double[] resultsFunctionalLinearSearch = functionalLinearSearchTest.test(arr, search, arr.length, iterations);
+        double[] resultsOOLinearSearch = ooLinearSearchTest.test(arr, search, arr.length, iterations);
+        double[] resultsQuickSort = quicksortTets.test(arr, arr.length, iterations);
 
         System.out.println("Funktionale Lineare Suche: " + resultsFunctionalLinearSearch[0] + "ms");
         System.out.println("OO Lineare Suche: " + resultsOOLinearSearch[0] + "ms");

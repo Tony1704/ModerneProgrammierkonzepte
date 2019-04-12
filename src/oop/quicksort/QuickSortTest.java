@@ -5,17 +5,24 @@ import app.SortTestable;
 public class QuickSortTest implements SortTestable {
 
     @Override
-    public double[] test(int[] arr) {
+    public double[] test(int[] arr, int numberOfElements, int iterations) {
         double[] returnValue = new double[1];
 
-        long startTime = System.nanoTime();
-        Sorter.quickSort(arr);
-        long endTime = System.nanoTime();
+        long lowestTime = Long.MAX_VALUE;
+        long lastTime = 0l;
 
-        returnValue[0] = (double) (endTime - startTime) / 1000000;
+        for (int i = 0; i < iterations; i++) {
+            long startTime = System.nanoTime();
+            Sorter.quickSort(arr);
+            long endTime = System.nanoTime();
+            lastTime = (endTime - startTime);
+            if (lastTime == lowestTime) {
+                lowestTime = lastTime;
+            }
+        }
+        returnValue[0] = (double) lastTime;
 
         return returnValue;
-
     }
 
 }
