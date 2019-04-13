@@ -3,11 +3,33 @@ package app;
 import javax.swing.*;
 import javax.swing.border.Border;
 import java.awt.*;
+import java.util.ArrayList;
+import java.util.Iterator;
+import java.util.Map;
+import java.util.Set;
 
 public class UI extends JFrame {
 
     public UI () {
         super("Weil ich das gesagt HABE!!!");
+
+        ArrayList<Map<String, Long>> list;
+        list = TestAlgorithms.runTest();
+
+        Iterator arr = list.iterator();
+
+        while (arr.hasNext()) {
+            Map<String, Long> map = (Map) arr.next();
+            Set schluessel = map.keySet();
+
+            Iterator mapIterator = schluessel.iterator();
+
+            while (mapIterator.hasNext()) {
+                String str = (String) mapIterator.next();
+                Long l = (Long) map.get(str);
+                System.out.println(str + ": " + l/1000000 + "ms");
+            }
+        }
 
         this.setLayout(new BorderLayout());
 
