@@ -22,6 +22,7 @@ public class TestAlgorithms {
 
         ArrayList<Map<String, Long>> list = new ArrayList<>();
         list.add(results1);
+        list.add(results2);
 
         return list;
     }
