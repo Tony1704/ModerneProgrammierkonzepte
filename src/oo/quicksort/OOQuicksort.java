@@ -1,6 +1,10 @@
 package oo.quicksort;
 
-public class OOQuicksort {
+import java.util.function.Function;
+
+import app.Testable;
+
+public class OOQuicksort extends Testable {
     public static void quickSort(int[] arr, int left, int right) {
         int divideIndex = divide(arr, left, right);
         if (divideIndex != -1 && left < right) {
@@ -49,5 +53,8 @@ public class OOQuicksort {
         return true;
     }
 
-    
+    public static Function<int[], Integer> quicksortTest = (arr) -> {
+        quickSort(arr);
+        return -1;
+    };
 }

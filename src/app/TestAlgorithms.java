@@ -16,8 +16,8 @@ public class TestAlgorithms {
             arr[i] = i;
         }
 
-        Map<String, Long> results1 = FunctionalLinearSearchIndex.test(arr, search,  iterations, FunctionalLinearSearchIndex.findTest);
-        //Map<String, Long> results2 = OOQuicksort.test(arr, iterations, OOQuicksort.quicksortTest);
+        Map<String, Long> results1 = FunctionalLinearSearchIndex.test(arr, search, iterations, FunctionalLinearSearchIndex.findTest);
+        Map<String, Long> results2 = OOQuicksort.test(arr, iterations, OOQuicksort.quicksortTest);
 
     }
 }
