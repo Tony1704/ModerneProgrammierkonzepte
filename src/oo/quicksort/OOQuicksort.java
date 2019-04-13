@@ -54,7 +54,11 @@ public class OOQuicksort extends Testable {
     }
 
     public static Function<int[], Integer> quicksortTest = (arr) -> {
-        quickSort(arr);
+        int[] arr2 = new int[arr.length];
+        for(int i = 0; i< arr.length; i++) {
+            arr[i] = (int) Math.floor(Math.random() * arr.length);
+        }
+        quickSort(arr2);
         return -1;
     };
 }
