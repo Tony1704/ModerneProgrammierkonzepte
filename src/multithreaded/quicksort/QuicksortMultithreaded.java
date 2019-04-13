@@ -4,7 +4,7 @@ import app.Testable;
 
 import java.util.function.Function;
 
-public class QuicksortMultithreaded extends Testable implements Runnable
+public class QuicksortMultithreaded extends Testable //implements Runnable
 {
 /*
     private int[] searchArray;
