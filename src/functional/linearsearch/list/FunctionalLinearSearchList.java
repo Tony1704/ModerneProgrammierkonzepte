@@ -22,8 +22,9 @@ public class FunctionalLinearSearchList extends Testable {
         return linearSearch.search(arr, searchInt);
     }
 
-    public static BiFunction<int[], Integer, List> findFunctional = (arr, searchInt) -> {
-        return linearSearch.search(arr, (int) searchInt);
+    public static BiFunction<int[], Integer, Integer> findFunctional = (arr, searchInt) -> {
+        linearSearch.search(arr, (int) searchInt);
+        return -1;
     };
 
 }
