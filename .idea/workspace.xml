@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="de5fd930-6574-4052-9c7e-41e4baa3154c" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/functional/linearsearch/list/FunctionalLinearSearchListTest.java" afterDir="false" />
+    <list default="true" id="de5fd930-6574-4052-9c7e-41e4baa3154c" name="Default Changelist" comment="Update Functional LinearSearch and TestAlgorithms">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/app/App.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/app/App.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/app/TestAlgorithms.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/app/TestAlgorithms.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/functional/linearsearch/index/FunctionalLinearSearchTest.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/functional/linearsearch/index/LinearSearch.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/functional/linearsearch/index/LinearSearch.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/App.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/app/TestAlgorithms.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/TestAlgorithms.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/functional/linearsearch/index/FunctionalLinearSearchTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/functional/linearsearch/index/FunctionalLinearSearchIndexTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/functional/linearsearch/index/LinearSearch.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/functional/linearsearch/index/LinearSearch.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/functional/linearsearch/list/FunctionalLinearSearchTest.java" beforeDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/classes/" />
     <ignored path="$PROJECT_DIR$/bin/" />
@@ -27,8 +27,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/app/App.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="136">
-              <caret line="8" column="1" selection-start-line="8" selection-start-column="1" selection-end-line="8" selection-end-column="1" />
+            <state relative-caret-position="102">
+              <caret line="6" column="1" lean-forward="true" selection-start-line="6" selection-start-column="1" selection-end-line="6" selection-end-column="1" />
             </state>
           </provider>
         </entry>
@@ -45,32 +45,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/functional/linearsearch/index/LinearSearchInterface.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="51">
-              <caret line="3" column="17" selection-start-line="3" selection-start-column="17" selection-end-line="3" selection-end-column="17" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/functional/linearsearch/index/LinearSearch.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="102">
-              <caret line="6" column="31" selection-start-line="6" selection-start-column="31" selection-end-line="6" selection-end-column="31" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/app/TestAlgorithms.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="374">
-              <caret line="22" lean-forward="true" selection-start-line="22" selection-end-line="22" />
+            <state relative-caret-position="544">
+              <caret line="32" lean-forward="true" selection-start-line="32" selection-end-line="32" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -79,10 +58,22 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/functional/linearsearch/index/FunctionalLinearSearchIndexTest.java">
+        <entry file="file://$PROJECT_DIR$/src/functional/linearsearch/list/LinearSearch.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="68">
-              <caret line="4" column="23" selection-start-line="4" selection-start-column="23" selection-end-line="4" selection-end-column="23" />
+            <state relative-caret-position="323">
+              <caret line="21" lean-forward="true" selection-start-line="21" selection-end-line="21" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/functional/linearsearch/list/LinearSearchInterface.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="119">
+              <caret line="7" lean-forward="true" selection-start-line="7" selection-end-line="7" />
             </state>
           </provider>
         </entry>
@@ -108,15 +99,15 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/app/App.java" />
         <option value="$PROJECT_DIR$/src/multithreaded/Placeholder.java" />
-        <option value="$PROJECT_DIR$/src/functional/linearsearch/list/LinearSearch.java" />
         <option value="$PROJECT_DIR$/src/functional/linearsearch/list/LinearSearchInterface.java" />
         <option value="$PROJECT_DIR$/src/functional/linearsearch/index/LinearSearchInterface.java" />
         <option value="$PROJECT_DIR$/src/functional/linearsearch/list/FunctionalLinearSearchTest.java" />
         <option value="$PROJECT_DIR$/src/functional/linearsearch/index/LinearSearch.java" />
         <option value="$PROJECT_DIR$/src/functional/linearsearch/index/FunctionalLinearSearchTest.java" />
+        <option value="$PROJECT_DIR$/src/app/App.java" />
         <option value="$PROJECT_DIR$/src/app/TestAlgorithms.java" />
+        <option value="$PROJECT_DIR$/src/functional/linearsearch/list/LinearSearch.java" />
       </list>
     </option>
   </component>
@@ -151,11 +142,6 @@
               <item name="SortAndSearch4" type="b2602c69:ProjectViewProjectNode" />
               <item name="ModerneProgrammierkonzepte" type="462c0819:PsiDirectoryNode" />
               <item name=".idea" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="SortAndSearch4" type="b2602c69:ProjectViewProjectNode" />
-              <item name="ModerneProgrammierkonzepte" type="462c0819:PsiDirectoryNode" />
-              <item name="bin" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="SortAndSearch4" type="b2602c69:ProjectViewProjectNode" />
@@ -232,7 +218,7 @@
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1555153413295" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1555155270380" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
@@ -252,7 +238,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.FunctionalLinearSearchListTest">
+  <component name="RunManager" selected="Application.App">
     <configuration name="App" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="app.App" />
       <module name="SortAndSearch4" />
@@ -281,8 +267,8 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.FunctionalLinearSearchListTest" />
         <item itemvalue="Application.App" />
+        <item itemvalue="Application.FunctionalLinearSearchListTest" />
       </list>
     </recent_temporary>
   </component>
@@ -298,7 +284,7 @@
       <updated>1555150008102</updated>
       <workItem from="1555150020323" duration="500000" />
       <workItem from="1555150644020" duration="153000" />
-      <workItem from="1555150902643" duration="2598000" />
+      <workItem from="1555150902643" duration="4584000" />
     </task>
     <task id="LOCAL-00001" summary="Add LinearSearch Return List classes">
       <created>1555151520732</created>
@@ -314,17 +300,23 @@
       <option name="project" value="LOCAL" />
       <updated>1555152152539</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Update Functional LinearSearch and TestAlgorithms">
+      <created>1555153570889</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1555153570889</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="3251000" />
+    <option name="totallyTimeSpent" value="5237000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="2576" height="1416" extended-state="6" />
-    <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.15699524" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.15699524" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -333,7 +325,7 @@
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.22681215" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.22681215" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -361,7 +353,8 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Add LinearSearch Return List classes" />
     <MESSAGE value="Update LinearSearch Return List classes and Index-Interface" />
-    <option name="LAST_COMMIT_MESSAGE" value="Update LinearSearch Return List classes and Index-Interface" />
+    <MESSAGE value="Update Functional LinearSearch and TestAlgorithms" />
+    <option name="LAST_COMMIT_MESSAGE" value="Update Functional LinearSearch and TestAlgorithms" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/src/multithreaded/Placeholder.java">
@@ -371,51 +364,8 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/functional/linearsearch/list/LinearSearchInterface.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="7" lean-forward="true" selection-start-line="7" selection-end-line="7" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/functional/linearsearch/list/LinearSearch.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="357">
-          <caret line="21" lean-forward="true" selection-start-line="21" selection-end-line="21" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#415#416#0" expanded="true" />
-            <element signature="e#473#474#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/.idea/.name">
       <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/app/App.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="8" column="1" selection-start-line="8" selection-start-column="1" selection-end-line="8" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/functional/linearsearch/index/FunctionalLinearSearchIndexTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="4" column="23" selection-start-line="4" selection-start-column="23" selection-end-line="4" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/functional/linearsearch/list/FunctionalLinearSearchListTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="5" column="43" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="43" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/functional/linearsearch/index/LinearSearchInterface.java">
       <provider selected="true" editor-type-id="text-editor">
@@ -434,10 +384,77 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/app/TestAlgorithms.java">
+    <entry file="file://$PROJECT_DIR$/bin/app/SortTestable.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <folding>
+            <element signature="e#0#205#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/functional/linearsearch/index/FunctionalLinearSearchIndexTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="4" column="23" selection-start-line="4" selection-start-column="23" selection-end-line="4" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bin/app/TestAlgorithms.class">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="374">
-          <caret line="22" lean-forward="true" selection-start-line="22" selection-end-line="22" />
+          <caret line="28" lean-forward="true" selection-start-line="28" selection-end-line="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bin/app/App.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="9" column="103" lean-forward="true" selection-start-line="9" selection-start-column="103" selection-end-line="9" selection-end-column="103" />
+          <folding>
+            <element signature="e#0#299#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/app/App.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="6" column="1" lean-forward="true" selection-start-line="6" selection-start-column="1" selection-end-line="6" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/functional/linearsearch/list/FunctionalLinearSearchListTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="5" column="43" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="43" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/functional/linearsearch/list/LinearSearch.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="323">
+          <caret line="21" lean-forward="true" selection-start-line="21" selection-end-line="21" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/functional/linearsearch/list/LinearSearchInterface.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="7" lean-forward="true" selection-start-line="7" selection-end-line="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/app/TestAlgorithms.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="544">
+          <caret line="32" lean-forward="true" selection-start-line="32" selection-end-line="32" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>

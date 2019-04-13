@@ -13,9 +13,9 @@ public class TestAlgorithms {
 
 
     public static void runTest() {
-        int[] arr = new int[6000];
+        int[] arr = new int[50];
         int search = 10;
-        final int iterations = 1000;
+        final int iterations = 50;
 
         for (int i = 0; i < arr.length; i++) {
             arr[i] = i;
