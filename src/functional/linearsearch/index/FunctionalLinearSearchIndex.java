@@ -27,4 +27,6 @@ public class FunctionalLinearSearchIndex extends Testable {
         return linearSearch.search(arr, (int) searchInt);
     };
 
+    // Comment
+
 }
