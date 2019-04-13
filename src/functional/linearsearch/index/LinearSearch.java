@@ -1,10 +1,14 @@
 package functional.linearsearch.index;
 
 import java.util.stream.IntStream;
-import java.util.NoSuchElementException;
 
-class LinearSearch {
-    private static LinearsearchInterface linearSearch = (intArr, intSearch) -> {
+import app.Testable;
+
+import java.util.NoSuchElementException;
+import java.util.function.BiFunction;
+
+public class LinearSearch extends Testable {
+    private static LinearSearchInterface linearSearch = (intArr, intSearch) -> {
         try {
             return IntStream
                     .range(0, intArr.length)
@@ -21,7 +25,7 @@ class LinearSearch {
         return linearSearch.search(arr, searchInt);
     }
 
-    static interface LinearsearchInterface {
-        public int search(int[] arr, int n);
-    }
+    public static BiFunction<int[], Integer, Integer> findTest = (arr, searchInt) -> {
+        return linearSearch.search(arr, (int) searchInt);
+    };
 }
