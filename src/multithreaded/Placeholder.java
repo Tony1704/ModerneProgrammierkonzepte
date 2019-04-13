@@ -5,5 +5,4 @@ package multithreaded;
  */
 public class Placeholder {
 
-    
 }
