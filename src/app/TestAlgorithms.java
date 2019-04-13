@@ -2,6 +2,10 @@ package app;
 
 import java.util.Map;
 
+import functional.linearsearch.index.FunctionalLinearSearchIndex;
+import oo.quicksort.OOQuicksort;
+
+
 public class TestAlgorithms {
     public static void runTest() {
         int[] arr = new int[6000];
@@ -12,8 +16,8 @@ public class TestAlgorithms {
             arr[i] = i;
         }
 
-        Map<String, Long> results1 = functional.linearsearch.index.LinearSearch.test(arr, search,  iterations, functional.linearsearch.index.LinearSearch.findTest);
-        Map<String, Long> results2 = oo.quicksort.Quicksort.test(arr, iterations, oo.quicksort.Quicksort.quicksortTest);
+        Map<String, Long> results1 = FunctionalLinearSearchIndex.test(arr, search,  iterations, FunctionalLinearSearchIndex.findTest);
+        Map<String, Long> results2 = OOQuicksort.test(arr, iterations, OOQuicksort.quicksortTest);
 
     }
 }

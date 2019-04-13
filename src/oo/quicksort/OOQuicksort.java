@@ -4,7 +4,7 @@ import java.util.function.Function;
 
 import app.Testable;
 
-public class Quicksort extends Testable {
+public class OOQuicksort extends Testable {
 
     public static void quickSort(int[] arr, int left, int right) {
         int divideIndex = divide(arr, left, right);

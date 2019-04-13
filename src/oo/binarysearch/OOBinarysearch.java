@@ -5,7 +5,7 @@ import app.Testable;
 /**
  * Binarysearch
  */
-public class Binarysearch extends Testable{
+public class OOBinarysearch extends Testable{
 
     
 

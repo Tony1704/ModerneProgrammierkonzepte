@@ -7,8 +7,8 @@ import app.Testable;
 import java.util.NoSuchElementException;
 import java.util.function.BiFunction;
 
-public class LinearSearch extends Testable {
-    private static LinearSearchInterface linearSearch = (intArr, intSearch) -> {
+public class FunctionalLinearSearchIndex extends Testable {
+    private static FunctionalLinearSearchIndexInterface linearSearch = (intArr, intSearch) -> {
         try {
             return IntStream
                     .range(0, intArr.length)

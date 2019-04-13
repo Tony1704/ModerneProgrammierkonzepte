@@ -6,8 +6,8 @@ import java.util.stream.Collectors;
 import java.util.stream.IntStream;
 import app.Testable;
 
-public class LinearSearch extends Testable {
-    private static LinearSearchInterface linearSearch = (arr, str) -> {
+public class FunctionalLinearSearchList extends Testable {
+    private static FunctionalLinearSearchListInterface linearSearch = (arr, str) -> {
         List list = IntStream
                 .range(0, arr.length)
                 .filter(i -> arr[i] == str)
@@ -24,4 +24,5 @@ public class LinearSearch extends Testable {
     static BiFunction<int[], Integer, List> findFunctional = (arr, searchInt) -> {
         return linearSearch.search(arr, (int) searchInt);
     };
+
 }
