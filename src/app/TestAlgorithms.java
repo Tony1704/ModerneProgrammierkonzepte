@@ -1,11 +1,13 @@
 package app;
 
-import functional.linearsearch.index.FunctionalLinearSearchTest;
+import functional.linearsearch.index.FunctionalLinearSearchIndexTest;
+import functional.linearsearch.list.FunctionalLinearSearchListTest;
 import oo.linearsearch.OOLinearSearchTest;
 import oo.quicksort.QuickSortTest;
 
 public class TestAlgorithms {
-    private static FunctionalLinearSearchTest functionalLinearSearchTest = new FunctionalLinearSearchTest();
+    private static FunctionalLinearSearchIndexTest functionalLinearSearchIndexTest = new FunctionalLinearSearchIndexTest();
+    private static FunctionalLinearSearchListTest functionalLinearSearchListTest = new FunctionalLinearSearchListTest();
     private static QuickSortTest quicksortTets = new QuickSortTest();
     private static OOLinearSearchTest ooLinearSearchTest = new OOLinearSearchTest();
 
@@ -19,11 +21,13 @@ public class TestAlgorithms {
             arr[i] = i;
         }
 
-        double[] resultsFunctionalLinearSearch = functionalLinearSearchTest.test(arr, search, arr.length, iterations);
+        double[] resultsFunctionalLinearSearchIndex = functionalLinearSearchIndexTest.test(arr, search, arr.length, iterations);
+        double[] resultsFunctionalLinearSearchList = functionalLinearSearchListTest.test(arr, search, arr.length, iterations);
         double[] resultsOOLinearSearch = ooLinearSearchTest.test(arr, search, arr.length, iterations);
         double[] resultsQuickSort = quicksortTets.test(arr, arr.length, iterations);
 
-        System.out.println("Funktionale Lineare Suche: " + resultsFunctionalLinearSearch[0] + "ms");
+        System.out.println("Funktionale Lineare Suche Index: " + resultsFunctionalLinearSearchIndex[0] + "ms");
+        System.out.println("Funktionale Lineare Suche List: " + resultsFunctionalLinearSearchList[0] + "ms");
         System.out.println("OO Lineare Suche: " + resultsOOLinearSearch[0] + "ms");
         System.out.println("OO QuickSort: " + resultsQuickSort[0] + "ms");
 

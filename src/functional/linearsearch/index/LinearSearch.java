@@ -4,7 +4,7 @@ import java.util.stream.IntStream;
 import java.util.NoSuchElementException;
 
 class LinearSearch {
-    private static LinearsearchInterface linearSearch = (intArr, intSearch) -> {
+    private static LinearSearchInterface linearSearch = (intArr, intSearch) -> {
         try {
             return IntStream
                     .range(0, intArr.length)
@@ -21,7 +21,4 @@ class LinearSearch {
         return linearSearch.search(arr, searchInt);
     }
 
-    static interface LinearsearchInterface {
-        public int search(int[] arr, int n);
-    }
 }
