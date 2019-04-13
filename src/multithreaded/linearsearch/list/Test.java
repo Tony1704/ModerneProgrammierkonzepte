@@ -16,9 +16,8 @@ public class Test {
         array[10] = 1;
         System.out.println("[10]: " + array[10]);
 
-        LinearSearchMultithreaded searchMulti = new LinearSearchMultithreaded(array, 3);
+        LinearSearchMultithreaded searchMulti = new LinearSearchMultithreaded();
 
-        System.out.println("Result found at position: " + searchMulti.search(1));
+        System.out.println("Result found at position: " + searchMulti.search(array, 1,3));
     }
-    //new Line
 }
