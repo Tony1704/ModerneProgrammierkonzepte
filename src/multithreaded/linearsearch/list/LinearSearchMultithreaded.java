@@ -2,10 +2,10 @@ package multithreaded.linearsearch.list;
 
 import java.util.List;
 import java.util.function.BiFunction;
-
 import app.SearchObject;
+import app.Testable;
 
-public class LinearSearchMultithreaded
+public class LinearSearchMultithreaded extends Testable
 {
     public List search(int[] pSearchArray, int pSearchElement, int pThreads)
     {
@@ -50,5 +50,12 @@ public class LinearSearchMultithreaded
 
         return true;
     }
+
+    public static BiFunction<int[], SearchObject, Integer> searchTest = (arr, searchObject) -> {
+        LinearSearchMultithreaded l = new LinearSearchMultithreaded();
+        l.search(arr, searchObject.search, searchObject.numberOfThreads);
+        return -1;
+    };
+
 }
 
