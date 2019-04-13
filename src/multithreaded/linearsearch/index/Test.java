@@ -1,4 +1,4 @@
-package multithreaded.index;
+package multithreaded.linearsearch.index;
 
 public class Test
 {

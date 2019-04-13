@@ -1,4 +1,4 @@
-package multithreaded.list;
+package multithreaded.linearsearch.list;
 
 import java.util.*;
 

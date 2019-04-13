@@ -1,4 +1,4 @@
-package multithreaded.list;
+package multithreaded.linearsearch.list;
 
 public class Test {
     public static void main(String[] args) {

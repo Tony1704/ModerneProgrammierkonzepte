@@ -1,4 +1,4 @@
-package multithreaded.index;
+package multithreaded.linearsearch.index;
 
 import java.util.Collections;
 import java.util.SortedMap;

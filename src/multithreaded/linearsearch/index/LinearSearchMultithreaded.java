@@ -1,6 +1,6 @@
-package multithreaded.list;
+package multithreaded.linearsearch.index;
 
-import java.util.List;
+import java.util.NoSuchElementException;
 
 public class LinearSearchMultithreaded
 {
@@ -18,7 +18,7 @@ public class LinearSearchMultithreaded
         threads = pThreads;
     }
 
-    public List search(int pSearchElement)
+    public int search(int pSearchElement)
     {
         Thread[] lThreadArray = new Thread[threads];
         LinearSearcherThread[] lLinearSearcherArray = new LinearSearcherThread[threads];
@@ -49,7 +49,19 @@ public class LinearSearchMultithreaded
             }
         }
 
-        return lLinearSearcherArray[0].getIndexList();
+        int lIndex = -1;
+
+        try
+        {
+            lIndex = lLinearSearcherArray[0].getIndex();
+        }
+        catch (NoSuchElementException ex)
+        {
+            lIndex = -1;
+        }
+
+
+        return lIndex;
     }
 
     private boolean threadsReady(LinearSearcherThread[] pSearcher) {
@@ -61,6 +73,5 @@ public class LinearSearchMultithreaded
 
         return true;
     }
-    //new Line
+//new Line
 }
-
