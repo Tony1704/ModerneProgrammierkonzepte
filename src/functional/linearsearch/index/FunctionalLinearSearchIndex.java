@@ -3,8 +3,8 @@ package functional.linearsearch.index;
 import java.util.stream.IntStream;
 import java.util.NoSuchElementException;
 
-class LinearSearchIndex {
-    private static LinearSearchInterfaceIndex linearSearch = (intArr, intSearch) -> {
+class FunctionalLinearSearchIndex {
+    private static FunctionalLinearSearchIndexInterface linearSearch = (intArr, intSearch) -> {
         try {
             return IntStream
                     .range(0, intArr.length)

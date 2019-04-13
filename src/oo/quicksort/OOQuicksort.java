@@ -1,6 +1,6 @@
 package oo.quicksort;
 
-public class Sorter {
+public class OOQuicksort {
     private static long bComparisons = 0;
     private static long bArrayAccesses = 0;
 
