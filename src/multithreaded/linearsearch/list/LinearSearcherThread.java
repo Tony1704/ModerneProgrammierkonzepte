@@ -50,5 +50,4 @@ public class LinearSearcherThread implements Runnable
     {
         return isReady;
     }
-//new Line
 }
