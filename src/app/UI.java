@@ -13,7 +13,7 @@ import java.util.Set;
 public class UI extends JFrame {
 
     public UI () {
-        super("Weil ich das gesagt HABE!!!");
+        super("Search and Sort");
 
 
         this.setLayout(new BorderLayout());
@@ -173,7 +173,7 @@ public class UI extends JFrame {
 
 
     public UI (ArrayList<Map<String, Long>> list, int x, int y) {
-        super("Weil ich das gesagt HABE!!!");
+        super("Search and Sort");
 
 
         this.setLayout(new BorderLayout());
