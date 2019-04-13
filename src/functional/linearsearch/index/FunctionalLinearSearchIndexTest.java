@@ -13,7 +13,7 @@ public class FunctionalLinearSearchIndexTest implements SearchTestable {
 
         for (int i = 0; i < iterations; i++) {
             long startTime = System.nanoTime();
-            LinearSearch.findLin(arr, search);
+            LinearSearchIndex.findLin(arr, search);
             long endTime = System.nanoTime();
             lastTime = (endTime - startTime);
             if (lastTime == lowestTime) {

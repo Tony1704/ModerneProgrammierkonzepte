@@ -15,7 +15,7 @@ public class FunctionalLinearSearchListTest implements SearchTestable {
 
         for (int i = 0; i < iterations; i++) {
             long startTime = System.nanoTime();
-            List list = LinearSearch.searchint(arr, 1);
+            List list = LinearSearchList.searchint(arr, 1);
             long endTime = System.nanoTime();
             lastTime = (endTime - startTime);
             if (lastTime == lowestTime) {
