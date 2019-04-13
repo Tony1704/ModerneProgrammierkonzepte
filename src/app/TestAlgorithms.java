@@ -23,11 +23,11 @@ public class TestAlgorithms {
 
         Map<String, Long> results1 = FunctionalLinearSearchIndex.test(arr, search, iterations, FunctionalLinearSearchIndex.findTest);
         Map<String, Long> results2 = FunctionalLinearSearchList.test(arr, search, iterations, FunctionalLinearSearchList.findFunctional);
-        Map<String, Long> results3 = OOQuicksort.test(arr, iterations, OOQuicksort.quicksortTest);
         Map<String, Long> results4 = LinearSearchMultithreaded.test(arr, iterations, new SearchObject(10, 10), LinearSearchMultithreaded.searchTest);
         Map<String, Long> results5 = multithreaded.linearsearch.list.LinearSearchMultithreaded.test(arr, iterations, new SearchObject(10, 10), multithreaded.linearsearch.list.LinearSearchMultithreaded.searchTest);
         Map<String, Long> results6 = OOLinearSearchIndex.test(arr, search, iterations, OOLinearSearchIndex.searchTest);
         Map<String, Long> results7 = OOLinearSearchList.test(arr, search, iterations, OOLinearSearchList.searchTest);
+        Map<String, Long> results3 = OOQuicksort.test(arr, iterations, OOQuicksort.quicksortTest);
 
         ArrayList<Map<String, Long>> list = new ArrayList<>();
         list.add(results1);

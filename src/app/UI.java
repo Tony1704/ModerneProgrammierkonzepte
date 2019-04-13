@@ -68,9 +68,27 @@ public class UI extends JFrame {
         JLabel OOLinearSearchList = new JLabel("Object Oriented LinearSearch List: ");
         JLabel OOBinarysearch = new JLabel("Object Oriented BinarySearch: ");
 
-        JLabel test = new JLabel(allTimes[0].toString());
-        JLabel test1 = new JLabel(allTimes[1].toString());
-        JLabel test2 = new JLabel(allTimes[2].toString());
+        JLabel time01 = new JLabel(allTimes[0].toString());
+        JLabel time02 = new JLabel(allTimes[1].toString());
+        JLabel time03 = new JLabel(allTimes[2].toString());
+        JLabel time11 = new JLabel(allTimes[3].toString());
+        JLabel time12 = new JLabel(allTimes[4].toString());
+        JLabel time13 = new JLabel(allTimes[5].toString());
+        JLabel time21 = new JLabel(allTimes[6].toString());
+        JLabel time22 = new JLabel(allTimes[7].toString());
+        JLabel time23 = new JLabel(allTimes[8].toString());
+        JLabel time31 = new JLabel(allTimes[9].toString());
+        JLabel time32 = new JLabel(allTimes[10].toString());
+        JLabel time33 = new JLabel(allTimes[11].toString());
+        JLabel time41 = new JLabel(allTimes[12].toString());
+        JLabel time42 = new JLabel(allTimes[13].toString());
+        JLabel time43 = new JLabel(allTimes[14].toString());
+        JLabel time51 = new JLabel(allTimes[15].toString());
+        JLabel time52 = new JLabel(allTimes[16].toString());
+        JLabel time53 = new JLabel(allTimes[17].toString());
+        JLabel time61 = new JLabel(allTimes[18].toString());
+        JLabel time62 = new JLabel(allTimes[19].toString());
+        JLabel time63 = new JLabel(allTimes[20].toString());
 
         JPanel panel_bottom = new JPanel(new FlowLayout(FlowLayout.CENTER));
 
@@ -87,16 +105,33 @@ public class UI extends JFrame {
         panel_search.add(min);
         panel_search.add(total);
         panel_search.add(FunctionalLinearSearchIndex);
-        panel_search.add(test);
-        panel_search.add(test1);
-        panel_search.add(test2);
+        panel_search.add(time01);
+        panel_search.add(time02);
+        panel_search.add(time03);
         panel_search.add(FunctionalLinearSearchList);
+        panel_search.add(time11);
+        panel_search.add(time12);
+        panel_search.add(time13);
         panel_search.add(MultithreadedLinearSearchIndex);
+        panel_search.add(time21);
+        panel_search.add(time22);
+        panel_search.add(time23);
         panel_search.add(MultithreadedLinearSearchList);
+        panel_search.add(time31);
+        panel_search.add(time32);
+        panel_search.add(time33);
         panel_search.add(OOLinearSearchIndex);
+        panel_search.add(time41);
+        panel_search.add(time42);
+        panel_search.add(time43);
         panel_search.add(OOLinearSearchList);
+        panel_search.add(time51);
+        panel_search.add(time52);
+        panel_search.add(time53);
         panel_search.add(OOBinarysearch);
-
+        panel_search.add(time61);
+        panel_search.add(time62);
+        panel_search.add(time63);
 
         panel_bottom_search.add(panel_search);
         panel_bottom_search.add(panel_sort);
@@ -113,7 +148,7 @@ public class UI extends JFrame {
         this.setVisible(true);
     }
 
-    public static void main(String[] args) {
+    /*public static void main(String[] args) {
         UI ui = new UI();
-    }
+    }*/
 }
