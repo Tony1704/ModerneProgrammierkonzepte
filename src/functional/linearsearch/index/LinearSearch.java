@@ -21,4 +21,7 @@ class LinearSearch {
         return linearSearch.search(arr, searchInt);
     }
 
+    static interface LinearsearchInterface {
+        public int search(int[] arr, int n);
+    }
 }

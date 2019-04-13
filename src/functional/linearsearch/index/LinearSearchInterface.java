@@ -1,5 +1,6 @@
 package functional.linearsearch.index;
 
-interface LinearsearchInterface {
+@FunctionalInterface
+public interface LinearSearchInterface {
     public int search(int[] arr, int n);
 }
