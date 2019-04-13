@@ -12,8 +12,8 @@ public class TestAlgorithms {
             arr[i] = i;
         }
 
-        Map<String, Long> results1 = functional.linearsearch.index.LinearSearch.test(arr, search, arr.length, iterations, functional.linearsearch.index.LinearSearch.findTest);
-        Map<String, Long> results2 = oo.quicksort.Quicksort.test(arr, arr.length, iterations, oo.quicksort.Quicksort.quicksortTest);
+        Map<String, Long> results1 = functional.linearsearch.index.LinearSearch.test(arr, search,  iterations, functional.linearsearch.index.LinearSearch.findTest);
+        Map<String, Long> results2 = oo.quicksort.Quicksort.test(arr, iterations, oo.quicksort.Quicksort.quicksortTest);
 
     }
 }

@@ -7,15 +7,16 @@ import java.util.function.Function;
 
 public class Testable {
 
-    public static Map<String, Long> test(int[] arr, int search, int numberOfElements, int iterations, BiFunction<int[], Integer, Integer> function) {
+    // Test Function for Search Algorithms
+    public static Map<String, Long> test(int[] arr, int search, int iterations, BiFunction<int[], Integer, Integer> function) {
         Map<String, Long> returnValues = new TreeMap<>();
         long totalTimeStart = System.nanoTime();
         long maxTime = Long.MIN_VALUE;
         long minTime = Long.MAX_VALUE;
 
-        for(int i = 0; i < arr.length; i++) {
+        for(int i = 0; i < iterations; i++) {
             long currentTimeStart = System.nanoTime();
-            function.apply(arr, 10);
+            function.apply(arr, search);
             long currentTimeEnd = System.nanoTime();
             if(currentTimeEnd - currentTimeStart < minTime) {
                 minTime = currentTimeEnd - currentTimeStart;
@@ -32,13 +33,14 @@ public class Testable {
         return returnValues;
     }
 
-    public static Map<String, Long> test(int[] arr, int numberOfElements, int iterations, Function<int[], Integer> function) {
+    // Test Function for Sorting Algorithms
+    public static Map<String, Long> test(int[] arr, int iterations, Function<int[], Integer> function) {
         Map<String, Long> returnValues = new TreeMap<>();
         long totalTimeStart = System.nanoTime();
         long maxTime = Long.MIN_VALUE;
         long minTime = Long.MAX_VALUE;
 
-        for(int i = 0; i < arr.length; i++) {
+        for(int i = 0; i < iterations; i++) {
             long currentTimeStart = System.nanoTime();
             function.apply(arr);
             long currentTimeEnd = System.nanoTime();

@@ -1,6 +1,10 @@
 package oo.linearsearch;
 
-public class LinearSearch {
+import java.util.function.BiFunction;
+
+import app.Testable;
+
+public class LinearSearch extends Testable{
     static int findInt(int[] arr, int search) {
         for (int i = 0; i < arr.length; i++) {
             if(arr[i] == search) {
@@ -9,4 +13,8 @@ public class LinearSearch {
         }
         return -1;
     }
+
+    public static BiFunction<int[], Integer, Integer> findTest = (arr, searchInt) -> {
+        return findInt(arr, (int) searchInt);
+    };
 }
