@@ -4,7 +4,7 @@ import java.util.Collections;
 import java.util.SortedMap;
 import java.util.TreeMap;
 
-public class LinearSearcherThread implements Runnable
+public class LinearSearchThread implements Runnable
 {
     private int[] searchArray;
 
@@ -16,7 +16,7 @@ public class LinearSearcherThread implements Runnable
 
     private boolean isReady;
 
-    public LinearSearcherThread(int[] pSearchArray, int pSearchElement, int pStart, int pEnd)
+    public LinearSearchThread(int[] pSearchArray, int pSearchElement, int pStart, int pEnd)
     {
         searchArray = pSearchArray;
         searchElement = pSearchElement;

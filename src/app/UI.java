@@ -14,14 +14,13 @@ public class UI extends JFrame {
         super("Weil ich das gesagt HABE!!!");
 
         Long [] allTimes = new Long[24];
-        int i;
+        int i = 0;
         ArrayList<Map<String, Long>> list;
         list = TestAlgorithms.runTest();
 
         Iterator arr = list.iterator();
 
         while (arr.hasNext()) {
-            i = 0;
             Map<String, Long> map = (Map) arr.next();
             Set schluessel = map.keySet();
 
@@ -29,7 +28,7 @@ public class UI extends JFrame {
 
             while (mapIterator.hasNext()) {
                 String str = (String) mapIterator.next();
-                Long l = (Long) (map.get(str)/1000000);
+                Long l = (map.get(str)/1000);
 
                 allTimes[i] = l;
 
