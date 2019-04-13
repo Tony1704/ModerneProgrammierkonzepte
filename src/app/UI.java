@@ -32,7 +32,7 @@ public class UI extends JFrame {
         panel_top.add(btn_run);
         panel_top.add(btn_cancel);
 
-        ActionListener buttonListener = new ActionListener() {
+        /*ActionListener buttonListener = new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
                 if (e.getActionCommand().equals("Run")) {
@@ -41,6 +41,15 @@ public class UI extends JFrame {
                 } else if (e.getActionCommand().equals("Cancel")) {
                     System.exit(0);
                 }
+            }
+        };*/
+
+        ActionListener buttonListener = e -> {
+            if (e.getActionCommand().equals("Run")) {
+                UI ui = new UI(TestAlgorithms.runTest(), UI.super.getX(), UI.super.getY());
+                UI.super.dispose();
+            } else if (e.getActionCommand().equals("Cancel")) {
+                System.exit(0);
             }
         };
 
@@ -183,15 +192,12 @@ public class UI extends JFrame {
         panel_top.add(btn_run);
         panel_top.add(btn_cancel);
 
-        ActionListener buttonListener = new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
-                if (e.getActionCommand().equals("Restart")) {
-                    UI ui = new UI(TestAlgorithms.runTest(), UI.super.getX(), UI.super.getY());
-                    UI.super.dispose();
-                } else if (e.getActionCommand().equals("Cancel"))
-                    System.exit(0);
-            }
+        ActionListener buttonListener = e -> {
+            if (e.getActionCommand().equals("Restart")) {
+                UI ui = new UI(TestAlgorithms.runTest(), UI.super.getX(), UI.super.getY());
+                UI.super.dispose();
+            } else if (e.getActionCommand().equals("Cancel"))
+                System.exit(0);
         };
 
         btn_run.addActionListener(buttonListener);
