@@ -5,15 +5,11 @@ package app;
  */
 public class SearchObject {
     public int numberOfThreads = -1;
-    public int numberOfIterations;
+    public int search;
 
-    public SearchObject(int numberOfIterations, int numberOfThreads) {
-        this.numberOfIterations = numberOfIterations;
+    public SearchObject(int search, int numberOfThreads) {
+        this.search = search;
         this.numberOfThreads = numberOfThreads;
-    }
-
-    public SearchObject(int numberOfIterations) {
-        this.numberOfIterations = numberOfIterations;
     }
     
 }

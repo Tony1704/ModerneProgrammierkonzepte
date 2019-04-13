@@ -1,8 +1,10 @@
 package multithreaded.linearsearch.index;
 
+import app.SearchObject;
 import app.Testable;
 
 import java.util.NoSuchElementException;
+import java.util.function.BiFunction;
 
 public class LinearSearchMultithreaded extends Testable
 {
@@ -61,4 +63,10 @@ public class LinearSearchMultithreaded extends Testable
 
         return true;
     }
+
+    public static BiFunction<int[], SearchObject, Integer> searchTest = (arr, searchObject) -> {
+        LinearSearchMultithreaded l = new LinearSearchMultithreaded();
+        l.search(arr, searchObject.search, searchObject.numberOfThreads);
+        return -1;
+    };
 }

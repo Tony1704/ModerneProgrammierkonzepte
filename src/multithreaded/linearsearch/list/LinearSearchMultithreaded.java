@@ -1,6 +1,9 @@
 package multithreaded.linearsearch.list;
 
 import java.util.List;
+import java.util.function.BiFunction;
+
+import app.SearchObject;
 
 public class LinearSearchMultithreaded
 {
@@ -61,6 +64,6 @@ public class LinearSearchMultithreaded
 
         return true;
     }
-    //new Line
+    
 }
 
