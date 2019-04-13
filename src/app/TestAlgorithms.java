@@ -1,8 +1,8 @@
 package app;
 
-import functional.linearsearch.returnindex.FunctionalLinearSearchTest;
-import oop.linearsearch.OOLinearSearchTest;
-import oop.quicksort.QuickSortTest;
+import functional.linearsearch.index.FunctionalLinearSearchTest;
+import oo.linearsearch.OOLinearSearchTest;
+import oo.quicksort.QuickSortTest;
 
 public class TestAlgorithms {
     private static FunctionalLinearSearchTest functionalLinearSearchTest = new FunctionalLinearSearchTest();
