@@ -1,9 +1,11 @@
 package functional.linearsearch.index;
 
 import java.util.stream.IntStream;
+import app.Testable;
 import java.util.NoSuchElementException;
+import java.util.function.BiFunction;
 
-class FunctionalLinearSearchIndex {
+public class FunctionalLinearSearchIndex extends Testable {
     private static FunctionalLinearSearchIndexInterface linearSearch = (intArr, intSearch) -> {
         try {
             return IntStream
@@ -20,5 +22,9 @@ class FunctionalLinearSearchIndex {
     public static int findLin(int[] arr, int searchInt) {
         return linearSearch.search(arr, searchInt);
     }
+
+    public static BiFunction<int[], Integer, Integer> findTest = (arr, searchInt) -> {
+        return linearSearch.search(arr, (int) searchInt);
+    };
 
 }
