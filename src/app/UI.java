@@ -97,7 +97,7 @@ public class UI extends JFrame {
         panel_bottom_sort.setBorder(border_sort);
 
         JPanel panel_search = new JPanel(new GridLayout(0, 4));
-        JPanel panel_sort = new JPanel(new GridLayout(4, 2));
+        JPanel panel_sort = new JPanel(new GridLayout(0, 4));
 
         panel_search.add(name);
         panel_search.add(max);
@@ -127,13 +127,23 @@ public class UI extends JFrame {
         panel_search.add(time51);
         panel_search.add(time52);
         panel_search.add(time53);
-        panel_search.add(OOBinarysearch);
-        panel_search.add(time61);
-        panel_search.add(time62);
-        panel_search.add(time63);
+
+        JLabel name1 = new JLabel("Name:");
+        JLabel max1 = new JLabel("Max Time:");
+        JLabel min1 = new JLabel("Min Time");
+        JLabel total1 = new JLabel("Total Time");
+
+        panel_sort.add(name1);
+        panel_sort.add(max1);
+        panel_sort.add(min1);
+        panel_sort.add(total1);
+        panel_sort.add(OOBinarysearch);
+        panel_sort.add(time61);
+        panel_sort.add(time62);
+        panel_sort.add(time63);
 
         panel_bottom_search.add(panel_search);
-        panel_bottom_search.add(panel_sort);
+        panel_bottom_sort.add(panel_sort);
 
         panel_bottom.add(panel_bottom_search);
         panel_bottom.add(panel_bottom_sort);
@@ -147,7 +157,4 @@ public class UI extends JFrame {
         this.setVisible(true);
     }
 
-    /*public static void main(String[] args) {
-        UI ui = new UI();
-    }*/
 }
