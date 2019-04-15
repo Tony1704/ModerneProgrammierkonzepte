@@ -5,7 +5,7 @@ import java.util.TreeMap;
 import java.util.function.BiFunction;
 import java.util.function.Function;
 
-public class Testable {
+abstract public class Testable {
 
     // Test Function for Search Algorithms
     public static Map<String, Long> test(int[] arr, int search, int iterations, BiFunction<int[], Integer, Integer> function) {
