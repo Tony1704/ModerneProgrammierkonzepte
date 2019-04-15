@@ -1,5 +1,6 @@
 package oo.linearsearch.list;
 
+import app.SearchObject;
 import app.Testable;
 import java.util.ArrayList;
 import java.util.List;
@@ -18,8 +19,8 @@ public class OOLinearSearchList extends Testable {
         return list;
     }
 
-    public static BiFunction<int[], Integer, Integer> searchTest = (arr, search) -> {
-        findInt(arr, search);
+    public static BiFunction<int[], SearchObject, Integer> searchTest = (arr, searchObject) -> {
+        findInt(arr, searchObject.search);
         return -1;
     };
 }

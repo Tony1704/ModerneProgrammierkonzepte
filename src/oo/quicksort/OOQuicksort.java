@@ -1,7 +1,9 @@
 package oo.quicksort;
 
+import java.util.function.BiFunction;
 import java.util.function.Function;
 
+import app.SearchObject;
 import app.Testable;
 
 public class OOQuicksort extends Testable {
@@ -53,7 +55,7 @@ public class OOQuicksort extends Testable {
         return true;
     }
 
-    public static Function<int[], Integer> quicksortTest = (arr) -> {
+    public static BiFunction<int[], SearchObject, Integer> quicksortTest = (arr, searchObject) -> {
         int[] arr2 = new int[arr.length];
         for(int i = 0; i< arr.length; i++) {
             arr[i] = (int) Math.floor(Math.random() * arr.length);

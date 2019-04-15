@@ -4,6 +4,8 @@ import java.util.List;
 import java.util.function.BiFunction;
 import java.util.stream.Collectors;
 import java.util.stream.IntStream;
+
+import app.SearchObject;
 import app.Testable;
 
 public class FunctionalLinearSearchList extends Testable {
@@ -22,8 +24,8 @@ public class FunctionalLinearSearchList extends Testable {
         return linearSearch.search(arr, searchInt);
     }
 
-    public static BiFunction<int[], Integer, Integer> findFunctional = (arr, searchInt) -> {
-        linearSearch.search(arr, (int) searchInt);
+    public static BiFunction<int[], SearchObject, Integer> findFunctional = (arr, searchObject) -> {
+        linearSearch.search(arr, searchObject.search);
         return -1;
     };
 
