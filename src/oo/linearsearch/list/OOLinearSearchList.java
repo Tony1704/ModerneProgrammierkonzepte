@@ -1,12 +1,12 @@
 package oo.linearsearch.list;
 
 import app.SearchObject;
-import app.Testable;
+import app.TestFunctionality;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.function.BiFunction;
 
-public class OOLinearSearchList extends Testable {
+public class OOLinearSearchList extends TestFunctionality {
     static List findInt(int[] arr, int search) {
 
         List<Integer> list = new ArrayList();

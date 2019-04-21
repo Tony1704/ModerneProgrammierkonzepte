@@ -4,9 +4,9 @@ import java.util.function.BiFunction;
 import java.util.function.Function;
 
 import app.SearchObject;
-import app.Testable;
+import app.TestFunctionality;
 
-public class OOQuicksort extends Testable {
+public class OOQuicksort extends TestFunctionality {
     public static void quickSort(int[] arr, int left, int right) {
         int divideIndex = divide(arr, left, right);
         if (divideIndex != -1 && left < right) {

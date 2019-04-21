@@ -3,11 +3,11 @@ package functional.linearsearch.index;
 import java.util.stream.IntStream;
 
 import app.SearchObject;
-import app.Testable;
+import app.TestFunctionality;
 import java.util.NoSuchElementException;
 import java.util.function.BiFunction;
 
-public class FunctionalLinearSearchIndex extends Testable {
+public class FunctionalLinearSearchIndex extends TestFunctionality {
     private static FunctionalLinearSearchIndexInterface linearSearch = (intArr, intSearch) -> {
         try {
             return IntStream

@@ -3,9 +3,9 @@ package multithreaded.linearsearch.list;
 import java.util.List;
 import java.util.function.BiFunction;
 import app.SearchObject;
-import app.Testable;
+import app.TestFunctionality;
 
-public class MultithreadedListLinearSearch extends Testable
+public class MultithreadedListLinearSearch extends TestFunctionality
 {
     public List search(int[] pSearchArray, int pSearchElement, int pThreads)
     {

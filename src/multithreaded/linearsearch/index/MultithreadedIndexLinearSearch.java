@@ -1,12 +1,12 @@
 package multithreaded.linearsearch.index;
 
 import app.SearchObject;
-import app.Testable;
+import app.TestFunctionality;
 
 import java.util.NoSuchElementException;
 import java.util.function.BiFunction;
 
-public class MultithreadedIndexLinearSearch extends Testable
+public class MultithreadedIndexLinearSearch extends TestFunctionality
 {
     public int search(int[] pSearchArray, int pSearchElement, int pThreads)
     {

@@ -6,9 +6,9 @@ import java.util.stream.Collectors;
 import java.util.stream.IntStream;
 
 import app.SearchObject;
-import app.Testable;
+import app.TestFunctionality;
 
-public class FunctionalLinearSearchList extends Testable {
+public class FunctionalLinearSearchList extends TestFunctionality {
 
     private static FunctionalLinearSearchListInterface linearSearch = (arr, str) -> {
         List list = IntStream

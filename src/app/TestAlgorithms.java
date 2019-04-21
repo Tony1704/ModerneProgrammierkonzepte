@@ -15,7 +15,7 @@ public class TestAlgorithms {
     public static ArrayList<Map<String, Long>> runTest() {
         int[] arr = new int[6000];
         int search = (int) Math.random() * arr.length;
-        final int iterations = 1000;
+        final int iterations = 100;
 
         for (int i = 0; i < arr.length; i++) {
             arr[i] = (int) Math.random() * arr.length;

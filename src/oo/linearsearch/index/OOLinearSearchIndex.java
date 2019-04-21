@@ -1,10 +1,10 @@
 package oo.linearsearch.index;
 
 import app.SearchObject;
-import app.Testable;
+import app.TestFunctionality;
 import java.util.function.BiFunction;
 
-public class OOLinearSearchIndex extends Testable {
+public class OOLinearSearchIndex extends TestFunctionality {
     static int findInt(int[] arr, int search) {
         for (int i = 0; i < arr.length; i++) {
             if(arr[i] == search) {

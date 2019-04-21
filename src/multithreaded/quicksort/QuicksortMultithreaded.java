@@ -1,10 +1,10 @@
 package multithreaded.quicksort;
 
-import app.Testable;
+import app.TestFunctionality;
 
 import java.util.function.Function;
 
-public class QuicksortMultithreaded extends Testable //implements Runnable
+public class QuicksortMultithreaded extends TestFunctionality //implements Runnable
 {
 /*
     private int[] searchArray;
