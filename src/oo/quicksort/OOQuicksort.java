@@ -20,7 +20,7 @@ public class OOQuicksort extends TestFunctionality {
 
     }
 
-    public static int divide(int[] arr, int left, int right) {
+    private static int divide(int[] arr, int left, int right) {
         if (right < left) {
             return -1;
         }
@@ -35,17 +35,25 @@ public class OOQuicksort extends TestFunctionality {
         }
         swap(arr, (++counter), right);
         return counter;
-
     }
 
-    // Swaps two values of an array given the array and two indexes
+    /**
+     * Swaps any two given values of a given array, elements need to be passed by their indexes
+     * @param arr Array to swap the elements on
+     * @param a index of the first value 
+     * @param b index of the second value
+     */
     private static void swap(int[] arr, int a, int b) {
         int temp = arr[a];
         arr[a] = arr[b];
         arr[b] = temp;
     }
 
-    // checks if a given array is sorted ascending
+    /**
+     * Takes int  Array and returns true if it's sorted ascended, otherwise returns false
+     * @param arr int Array to be checked
+     * @return returns true if Array is sorted, otherwise false
+     */
     public static boolean isSortedAscending(int[] arr) {
         for (int i = 0; i < arr.length - 1; i++) {
             if (arr[i] > arr[i + 1]) {
@@ -55,6 +63,11 @@ public class OOQuicksort extends TestFunctionality {
         return true;
     }
 
+    /**
+     * Only used for taking the Time it takes to perform a quicksort
+     * NOTE: Every time this function is called it newly generates the values in the array
+     * Function called in TestAlgorithms
+     */
     public static BiFunction<int[], SearchObject, Integer> quicksortTest = (arr, searchObject) -> {
         int[] arr2 = new int[arr.length];
         for(int i = 0; i< arr.length; i++) {

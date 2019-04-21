@@ -7,7 +7,14 @@ import java.util.function.Function;
 
 abstract public class TestFunctionality {
 
-    // Test Function for Mulithreaded Search Functions
+    /**
+     * Takes in arguments to run the test function on an Algorithm from a class that extends the TestFunctionality Class
+     * @param arr int Array that is used to run the Test on (Note: For sorting Algorithms this has to be reshuffled in the testing Function)
+     * @param iterations number of times the test will run
+     * @param searchObject Object containing the integer to be searched and the number of threads (only relevant for multithreaded algorithms)
+     * @param function Specified Test Function (BiFunction<int[], SearchObject, Integer> that needs to be defined in the Class of the Algortihms that needs will be tested)
+     * @return returns a Map<String, Long> with the Testing Times ("total_time", "min_time", "max_time")
+     */
     public static Map<String, Long> test(int[] arr, int iterations, SearchObject searchObject, BiFunction<int[], SearchObject, Integer> function) {
         Map<String, Long> returnValues = new TreeMap<>();
         long totalTimeStart = System.nanoTime();
