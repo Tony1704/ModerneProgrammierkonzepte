@@ -4,6 +4,9 @@
 # Log file
 *.log
 
+# Ignore all .class files in bin folder
+**/bin
+
 # BlueJ files
 *.ctxt
 
@@ -24,3 +27,4 @@ hs_err_pid*
 
 # Ignore that one weird created by IntelliJ
 workspace.xml
+bin/app/TestAlgorithms.class

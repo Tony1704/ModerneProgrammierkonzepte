@@ -8,7 +8,7 @@ import java.util.function.BiFunction;
 abstract public class TestFunctionality {
 
     /**
-     * Takes in arguments to run the test function on an Algorithm from a class that extends the TestFunctionality Class
+     * Takes in arguments to run the test function on an Algorithm from a class that extends the {@link TestFunctionality} Class
      * @param arr int Array that is used to run the Test on (Note: For sorting Algorithms this has to be reshuffled in the testing Function)
      * @param iterations number of times the test will run
      * @param searchObject Object containing the integer to be searched and the number of threads (only relevant for multithreaded algorithms)

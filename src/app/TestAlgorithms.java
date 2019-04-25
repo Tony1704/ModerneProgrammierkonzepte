@@ -13,7 +13,8 @@ import oo.quicksort.OOQuicksort;
 
 public class TestAlgorithms {
         /**
-         * Function executes tests on all the algorithms specified in it
+         * Function executes tests on all the algorithms specified in it <p>
+         * Calls Functions as defined in {@link TestFunctionality}
          * @return returns an ArrayList<Map<String, Long>> of all test results
          */
         public static ArrayList<Map<String, Long>> runTest() {
