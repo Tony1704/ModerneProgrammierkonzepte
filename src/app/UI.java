@@ -21,7 +21,7 @@ public class UI extends JFrame {
     /**
      * Generates UI, click Run Or Restart to start the tests
      * <p>
-     * Click Cnacel or X to close the Window and end the Task
+     * Click Cancel or X to close the Window and end the Task
      */
     public UI () {
         super("Search and Sort");
@@ -38,7 +38,9 @@ public class UI extends JFrame {
         JPanel panel_top = new JPanel(new FlowLayout(FlowLayout.CENTER));
 
         JButton btn_run = new JButton("Run");
+        btn_run.setToolTipText("Run Tests on all Algorithms");
         JButton btn_cancel = new JButton("Cancel");
+        btn_cancel.setToolTipText("Cancel Program and close the window");
 
         panel_top.add(btn_run);
         panel_top.add(btn_cancel);
@@ -198,7 +200,9 @@ public class UI extends JFrame {
         JPanel panel_top = new JPanel(new FlowLayout(FlowLayout.CENTER));
 
         JButton btn_run = new JButton("Restart");
+        btn_run.setToolTipText("Restart all Tests");
         JButton btn_cancel = new JButton("Cancel");
+        btn_cancel.setToolTipText("Cancel Program and close the window");
 
         panel_top.add(btn_run);
         panel_top.add(btn_cancel);

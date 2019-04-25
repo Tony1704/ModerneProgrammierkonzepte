@@ -1,5 +1,6 @@
 {
     "configurations": [
+        
         {
             "type": "java",
             "name": "CodeLens (Launch) - FunctionalLinearSearchTest",
@@ -12,7 +13,7 @@
             "name": "CodeLens (Launch) - App",
             "request": "launch",
             "mainClass": "app.App",
-            "projectName": "SortAndSearch4"
+            "projectName": "Moderne Programmierkonzepte"
         }
     ]
 }
