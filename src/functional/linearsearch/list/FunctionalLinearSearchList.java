@@ -11,7 +11,7 @@ import app.TestFunctionality;
 public class FunctionalLinearSearchList extends TestFunctionality {
 
     private static FunctionalLinearSearchListInterface linearSearch = (arr, str) -> {
-        List list = IntStream
+        List<Integer> list = IntStream
                 .range(0, arr.length)
                 .filter(i -> arr[i] == str)
                 .mapToObj(i -> i)
@@ -20,7 +20,7 @@ public class FunctionalLinearSearchList extends TestFunctionality {
         return list;
     };
 
-    public static List searchint(int [] arr, int searchInt){
+    public static List<Integer> searchint(int [] arr, int searchInt){
         return linearSearch.search(arr, searchInt);
     }
 

@@ -1,8 +1,7 @@
 package multithreaded.quicksort;
 
 import app.TestFunctionality;
-
-import java.util.function.Function;
+//import java.util.function.Function;
 
 public class QuicksortMultithreaded extends TestFunctionality //implements Runnable
 {

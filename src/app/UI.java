@@ -3,15 +3,26 @@ package app;
 import javax.swing.*;
 import javax.swing.border.Border;
 import java.awt.*;
-import java.awt.event.ActionEvent;
+//import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.Map;
 import java.util.Set;
 
+/**
+ * UI class generates User Interface for executing and showing test results
+ */
+
 public class UI extends JFrame {
 
+    private static final long serialVersionUID = 1L;
+
+    /**
+     * Generates UI, click Run Or Restart to start the tests
+     * <p>
+     * Click Cnacel or X to close the Window and end the Task
+     */
     public UI () {
         super("Search and Sort");
 
@@ -46,7 +57,7 @@ public class UI extends JFrame {
 
         ActionListener buttonListener = e -> {
             if (e.getActionCommand().equals("Run")) {
-                UI ui = new UI(TestAlgorithms.runTest(), UI.super.getX(), UI.super.getY());
+                new UI(TestAlgorithms.runTest(), UI.super.getX(), UI.super.getY());
                 UI.super.dispose();
             } else if (e.getActionCommand().equals("Cancel")) {
                 System.exit(0);
@@ -194,7 +205,7 @@ public class UI extends JFrame {
 
         ActionListener buttonListener = e -> {
             if (e.getActionCommand().equals("Restart")) {
-                UI ui = new UI(TestAlgorithms.runTest(), UI.super.getX(), UI.super.getY());
+                new UI(TestAlgorithms.runTest(), UI.super.getX(), UI.super.getY());
                 UI.super.dispose();
             } else if (e.getActionCommand().equals("Cancel"))
                 System.exit(0);
@@ -207,13 +218,13 @@ public class UI extends JFrame {
         int i = 0;
 
         if (list != null) {
-            Iterator arr = list.iterator();
+            Iterator<Map<String, Long>> arr = list.iterator();
 
             while (arr.hasNext()) {
-                Map<String, Long> map = (Map) arr.next();
-                Set schluessel = map.keySet();
+                Map<String, Long> map = (Map<String, Long>) arr.next();
+                Set<String> schluessel = map.keySet();
 
-                Iterator mapIterator = schluessel.iterator();
+                Iterator<String> mapIterator = schluessel.iterator();
 
                 while (mapIterator.hasNext()) {
                     String str = (String) mapIterator.next();

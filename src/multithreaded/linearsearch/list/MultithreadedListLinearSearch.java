@@ -7,7 +7,7 @@ import app.TestFunctionality;
 
 public class MultithreadedListLinearSearch extends TestFunctionality
 {
-    public List search(int[] pSearchArray, int pSearchElement, int pThreads)
+    public List<Integer> search(int[] pSearchArray, int pSearchElement, int pThreads)
     {
         Thread[] lThreadArray = new Thread[pThreads];
         LinearSearcherThread[] lLinearSearcherArray = new LinearSearcherThread[pThreads];

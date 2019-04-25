@@ -7,9 +7,9 @@ import java.util.List;
 import java.util.function.BiFunction;
 
 public class OOLinearSearchList extends TestFunctionality {
-    static List findInt(int[] arr, int search) {
+    static List<Integer> findInt(int[] arr, int search) {
 
-        List<Integer> list = new ArrayList();
+        List<Integer> list = new ArrayList<>();
 
         for (int i = 0; i < arr.length; i++) {
             if(arr[i] == search) {

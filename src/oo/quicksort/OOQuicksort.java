@@ -1,12 +1,17 @@
 package oo.quicksort;
 
 import java.util.function.BiFunction;
-import java.util.function.Function;
 
 import app.SearchObject;
 import app.TestFunctionality;
 
 public class OOQuicksort extends TestFunctionality {
+    /**
+     * Same as {@code quicksort(int[] arr)} just with more arguments
+     * @param arr (unsorted) int Array, passed by reference
+     * @param left start of section that will be sorted ({@code 0} for entire array)
+     * @param right end of section taht will be sorted ({@code arr.length - 1} for entire array)
+     */
     public static void quickSort(int[] arr, int left, int right) {
         int divideIndex = divide(arr, left, right);
         if (divideIndex != -1 && left < right) {
@@ -15,11 +20,22 @@ public class OOQuicksort extends TestFunctionality {
         }
     }
 
+    /**
+     * Pass function an (unsorted) int Array and it will be sorted (passed by reference)
+     * @param arr (unosrted) int Array 
+     */
     public static void quickSort(int[] arr) {
         quickSort(arr, 0, arr.length - 1);
 
     }
 
+    /**
+     * Iterates through the array and swaps larger elements to the right
+     * @param arr int array, passed by reference
+     * @param left start of section that needs to be looked at
+     * @param right end of section that needs to be looked at
+     * @return returns the number of elements swapped (see quick sort algorithms for that)
+     */
     private static int divide(int[] arr, int left, int right) {
         if (right < left) {
             return -1;
@@ -64,8 +80,8 @@ public class OOQuicksort extends TestFunctionality {
     }
 
     /**
-     * Only used for taking the Time it takes to perform a quicksort
-     * NOTE: Every time this function is called it newly generates the values in the array
+     * Only used for taking the Time it takes to perform a quicksort <p>
+     * NOTE: Every time this function is called it newly generates the values in the array <p>
      * Function called in TestAlgorithms
      */
     public static BiFunction<int[], SearchObject, Integer> quicksortTest = (arr, searchObject) -> {
