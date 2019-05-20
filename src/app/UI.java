@@ -16,7 +16,12 @@ import java.util.Set;
 
 public class UI extends JFrame {
 
-    private static final long serialVersionUID = 1L;
+    // Border
+    Border border = BorderFactory.createEtchedBorder();
+    Border border_search = BorderFactory.createTitledBorder(border, "Linear Search");
+    Border border_sort = BorderFactory.createTitledBorder(border, "QuickSort + Binary Search");
+
+    //private static final long serialVersionUID = 1L;
 
     /**
      * Generates UI, click Run Or Restart to start the tests
@@ -29,11 +34,6 @@ public class UI extends JFrame {
 
         this.setLayout(new BorderLayout());
 
-        // Border
-        Border border = BorderFactory.createEtchedBorder();
-        Border border_search = BorderFactory.createTitledBorder(border, "Search");
-        Border border_sort = BorderFactory.createTitledBorder(border, "Sort");
-
         // Top JFrame
         JPanel panel_top = new JPanel(new FlowLayout(FlowLayout.CENTER));
 
@@ -44,18 +44,6 @@ public class UI extends JFrame {
 
         panel_top.add(btn_run);
         panel_top.add(btn_cancel);
-
-        /*ActionListener buttonListener = new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
-                if (e.getActionCommand().equals("Run")) {
-                    UI ui = new UI(TestAlgorithms.runTest(), UI.super.getX(), UI.super.getY());
-                    UI.super.dispose();
-                } else if (e.getActionCommand().equals("Cancel")) {
-                    System.exit(0);
-                }
-            }
-        };*/
 
         ActionListener buttonListener = e -> {
             if (e.getActionCommand().equals("Run")) {
@@ -76,9 +64,9 @@ public class UI extends JFrame {
         }
 
 
-        // Bottom JFrame
-        JLabel name = new JLabel("Name:");
-        JLabel max = new JLabel("Max Time:");
+        // center JFrame
+        JLabel name = new JLabel("Name");
+        JLabel max = new JLabel("Max Time");
         JLabel min = new JLabel("Min Time");
         JLabel total = new JLabel("Total Time");
 
@@ -112,12 +100,40 @@ public class UI extends JFrame {
         JLabel time62 = new JLabel(allTimes[19].toString());
         JLabel time63 = new JLabel(allTimes[20].toString());
 
-        JPanel panel_bottom = new JPanel(new FlowLayout(FlowLayout.CENTER));
 
-        JPanel panel_bottom_search = new JPanel(new FlowLayout(FlowLayout.CENTER));
-        panel_bottom_search.setBorder(border_search);
-        JPanel panel_bottom_sort = new JPanel(new FlowLayout(FlowLayout.CENTER));
-        panel_bottom_sort.setBorder(border_sort);
+        time01.setHorizontalAlignment(JLabel.RIGHT);
+        time02.setHorizontalAlignment(JLabel.RIGHT);
+        time03.setHorizontalAlignment(JLabel.RIGHT);
+        time11.setHorizontalAlignment(JLabel.RIGHT);
+        time12.setHorizontalAlignment(JLabel.RIGHT);
+        time13.setHorizontalAlignment(JLabel.RIGHT);
+        time21.setHorizontalAlignment(JLabel.RIGHT);
+        time22.setHorizontalAlignment(JLabel.RIGHT);
+        time23.setHorizontalAlignment(JLabel.RIGHT);
+        time31.setHorizontalAlignment(JLabel.RIGHT);
+        time32.setHorizontalAlignment(JLabel.RIGHT);
+        time33.setHorizontalAlignment(JLabel.RIGHT);
+        time41.setHorizontalAlignment(JLabel.RIGHT);
+        time42.setHorizontalAlignment(JLabel.RIGHT);
+        time43.setHorizontalAlignment(JLabel.RIGHT);
+        time51.setHorizontalAlignment(JLabel.RIGHT);
+        time52.setHorizontalAlignment(JLabel.RIGHT);
+        time53.setHorizontalAlignment(JLabel.RIGHT);
+        time61.setHorizontalAlignment(JLabel.RIGHT);
+        time62.setHorizontalAlignment(JLabel.RIGHT);
+        time63.setHorizontalAlignment(JLabel.RIGHT);
+
+        name.setHorizontalAlignment(JLabel.CENTER);
+        max.setHorizontalAlignment(JLabel.CENTER);
+        min.setHorizontalAlignment(JLabel.CENTER);
+        total.setHorizontalAlignment(JLabel.CENTER);
+
+        JPanel panel_center = new JPanel(new FlowLayout(FlowLayout.CENTER));
+
+        JPanel panel_center_search = new JPanel(new FlowLayout(FlowLayout.CENTER));
+        panel_center_search.setBorder(border_search);
+        JPanel panel_center_sort = new JPanel(new FlowLayout(FlowLayout.CENTER));
+        panel_center_sort.setBorder(border_sort);
 
         JPanel panel_search = new JPanel(new GridLayout(0, 4));
         JPanel panel_sort = new JPanel(new GridLayout(0, 4));
@@ -151,10 +167,15 @@ public class UI extends JFrame {
         panel_search.add(time52);
         panel_search.add(time53);
 
-        JLabel name1 = new JLabel("Name:");
-        JLabel max1 = new JLabel("Max Time:");
+        JLabel name1 = new JLabel("Name");
+        JLabel max1 = new JLabel("Max Time");
         JLabel min1 = new JLabel("Min Time");
         JLabel total1 = new JLabel("Total Time");
+
+        name1.setHorizontalAlignment(JLabel.CENTER);
+        max1.setHorizontalAlignment(JLabel.CENTER);
+        min1.setHorizontalAlignment(JLabel.CENTER);
+        total1.setHorizontalAlignment(JLabel.CENTER);
 
         panel_sort.add(name1);
         panel_sort.add(max1);
@@ -165,15 +186,15 @@ public class UI extends JFrame {
         panel_sort.add(time62);
         panel_sort.add(time63);
 
-        panel_bottom_search.add(panel_search);
-        panel_bottom_sort.add(panel_sort);
+        panel_center_search.add(panel_search);
+        panel_center_sort.add(panel_sort);
 
-        panel_bottom.add(panel_bottom_search);
-        panel_bottom.add(panel_bottom_sort);
+        panel_center.add(panel_center_search);
+        panel_center.add(panel_center_sort);
 
         // Configuration Frame
         this.add(panel_top, BorderLayout.NORTH);
-        this.add(panel_bottom, BorderLayout.CENTER);
+        this.add(panel_center, BorderLayout.CENTER);
 
         this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         this.pack();
@@ -190,11 +211,6 @@ public class UI extends JFrame {
 
 
         this.setLayout(new BorderLayout());
-
-        // Border
-        Border border = BorderFactory.createEtchedBorder();
-        Border border_search = BorderFactory.createTitledBorder(border, "Search");
-        Border border_sort = BorderFactory.createTitledBorder(border, "Sort");
 
         // Top JFrame
         JPanel panel_top = new JPanel(new FlowLayout(FlowLayout.CENTER));
@@ -241,9 +257,9 @@ public class UI extends JFrame {
             }
         }
 
-        // Bottom JFrame
-        JLabel name = new JLabel("Name:");
-        JLabel max = new JLabel("Max Time:");
+        // center JFrame
+        JLabel name = new JLabel("Name");
+        JLabel max = new JLabel("Max Time");
         JLabel min = new JLabel("Min Time");
         JLabel total = new JLabel("Total Time");
 
@@ -277,12 +293,39 @@ public class UI extends JFrame {
         JLabel time62 = new JLabel(allTimes[19].toString());
         JLabel time63 = new JLabel(allTimes[20].toString());
 
-        JPanel panel_bottom = new JPanel(new FlowLayout(FlowLayout.CENTER));
+        time01.setHorizontalAlignment(JLabel.RIGHT);
+        time02.setHorizontalAlignment(JLabel.RIGHT);
+        time03.setHorizontalAlignment(JLabel.RIGHT);
+        time11.setHorizontalAlignment(JLabel.RIGHT);
+        time12.setHorizontalAlignment(JLabel.RIGHT);
+        time13.setHorizontalAlignment(JLabel.RIGHT);
+        time21.setHorizontalAlignment(JLabel.RIGHT);
+        time22.setHorizontalAlignment(JLabel.RIGHT);
+        time23.setHorizontalAlignment(JLabel.RIGHT);
+        time31.setHorizontalAlignment(JLabel.RIGHT);
+        time32.setHorizontalAlignment(JLabel.RIGHT);
+        time33.setHorizontalAlignment(JLabel.RIGHT);
+        time41.setHorizontalAlignment(JLabel.RIGHT);
+        time42.setHorizontalAlignment(JLabel.RIGHT);
+        time43.setHorizontalAlignment(JLabel.RIGHT);
+        time51.setHorizontalAlignment(JLabel.RIGHT);
+        time52.setHorizontalAlignment(JLabel.RIGHT);
+        time53.setHorizontalAlignment(JLabel.RIGHT);
+        time61.setHorizontalAlignment(JLabel.RIGHT);
+        time62.setHorizontalAlignment(JLabel.RIGHT);
+        time63.setHorizontalAlignment(JLabel.RIGHT);
 
-        JPanel panel_bottom_search = new JPanel(new FlowLayout(FlowLayout.CENTER));
-        panel_bottom_search.setBorder(border_search);
-        JPanel panel_bottom_sort = new JPanel(new FlowLayout(FlowLayout.CENTER));
-        panel_bottom_sort.setBorder(border_sort);
+        name.setHorizontalAlignment(JLabel.CENTER);
+        max.setHorizontalAlignment(JLabel.CENTER);
+        min.setHorizontalAlignment(JLabel.CENTER);
+        total.setHorizontalAlignment(JLabel.CENTER);
+
+        JPanel panel_center = new JPanel(new FlowLayout(FlowLayout.CENTER));
+
+        JPanel panel_center_search = new JPanel(new FlowLayout(FlowLayout.CENTER));
+        panel_center_search.setBorder(border_search);
+        JPanel panel_center_sort = new JPanel(new FlowLayout(FlowLayout.CENTER));
+        panel_center_sort.setBorder(border_sort);
 
         JPanel panel_search = new JPanel(new GridLayout(0, 4));
         JPanel panel_sort = new JPanel(new GridLayout(0, 4));
@@ -316,10 +359,16 @@ public class UI extends JFrame {
         panel_search.add(time52);
         panel_search.add(time53);
 
-        JLabel name1 = new JLabel("Name:");
-        JLabel max1 = new JLabel("Max Time:");
+        JLabel name1 = new JLabel("Name");
+        JLabel max1 = new JLabel("Max Time");
         JLabel min1 = new JLabel("Min Time");
         JLabel total1 = new JLabel("Total Time");
+
+        name1.setHorizontalAlignment(JLabel.CENTER);
+        max1.setHorizontalAlignment(JLabel.CENTER);
+        min1.setHorizontalAlignment(JLabel.CENTER);
+        total1.setHorizontalAlignment(JLabel.CENTER);
+
 
         panel_sort.add(name1);
         panel_sort.add(max1);
@@ -330,15 +379,15 @@ public class UI extends JFrame {
         panel_sort.add(time62);
         panel_sort.add(time63);
 
-        panel_bottom_search.add(panel_search);
-        panel_bottom_sort.add(panel_sort);
+        panel_center_search.add(panel_search);
+        panel_center_sort.add(panel_sort);
 
-        panel_bottom.add(panel_bottom_search);
-        panel_bottom.add(panel_bottom_sort);
+        panel_center.add(panel_center_search);
+        panel_center.add(panel_center_sort);
 
         // Configuration Frame
         this.add(panel_top, BorderLayout.NORTH);
-        this.add(panel_bottom, BorderLayout.CENTER);
+        this.add(panel_center, BorderLayout.CENTER);
 
         this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         this.pack();
@@ -347,5 +396,4 @@ public class UI extends JFrame {
 
         this.setVisible(true);
     }
-
 }

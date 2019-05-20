@@ -34,7 +34,7 @@ abstract public class TestFunctionality {
         }
 
         long totalTimeEnd = System.nanoTime();
-        returnValues.put("total_time", (totalTimeEnd - totalTimeStart));
+        returnValues.put("total_time", (totalTimeEnd - totalTimeStart)/iterations);
         returnValues.put("min_time", minTime);
         returnValues.put("max_time", maxTime);
         return returnValues;
