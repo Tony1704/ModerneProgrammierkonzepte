@@ -85,11 +85,7 @@ public class OOQuicksort extends TestFunctionality {
      * Function called in TestAlgorithms
      */
     public static BiFunction<int[], SearchObject, Integer> quicksortTest = (arr, searchObject) -> {
-        int[] arr2 = new int[arr.length];
-        for(int i = 0; i< arr.length; i++) {
-            arr[i] = (int) Math.floor(Math.random() * arr.length);
-        }
-        quickSort(arr2);
+        quickSort(arr);
         return -1;
     };
 
