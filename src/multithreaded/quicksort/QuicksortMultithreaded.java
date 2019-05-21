@@ -1,108 +1,39 @@
 package multithreaded.quicksort;
-
+import app.SearchObject;
 import app.TestFunctionality;
-//import java.util.function.Function;
+import java.util.concurrent.atomic.AtomicInteger;
+import java.util.function.BiFunction;
 
-public class QuicksortMultithreaded extends TestFunctionality //implements Runnable
+public class QuicksortMultithreaded extends TestFunctionality
 {
-/*
-    private int[] searchArray;
-    private int leftPart;
-    private int rightPart;
-
-    public QuicksortMultithreaded(int[] arr, int left, int right)
+    /**
+     * Creates an object of type Sorter and sorts the given array
+     * @param arr int array, passed by reference
+     * @param threads number of max Threads used for sorting
+     */
+    public static void quickSort(int[] arr, int threads)
     {
-        searchArray = arr;
-        leftPart = left;
-        rightPart = right;
-    }
-
-    public QuicksortMultithreaded(int[] arr)
-    {
-        this(arr, 0, arr.length - 1);
-    }
-
-    public static void quickSort(int[] arr, int left, int right) {
-        int divideIndex = divide(arr, left, right);
-        if (divideIndex != -1 && left < right) {
-            Thread lThreadLeft = new Thread(new QuicksortMultithreaded(arr, left, divideIndex - 1));
-            Thread lThreadRight = new Thread(new QuicksortMultithreaded(arr, divideIndex + 1, right));
-
-            lThreadLeft.start();
-            lThreadRight.start();
-
-            try {
-                lThreadLeft.join();
-            }catch (InterruptedException e)
+        final AtomicInteger lThreadCounter = new AtomicInteger(1);
+        Sorter lThread = new Sorter(arr, 0, arr.length-1, lThreadCounter, threads);
+        lThread.run();
+        try {
+            synchronized (lThreadCounter)
             {
-
+                lThreadCounter.wait();
             }
-
-            try {
-                lThreadRight.join();
-            }
-            catch (InterruptedException e)
-            {
-
-            }
+        }
+        catch (InterruptedException e)
+        {
+            e.printStackTrace();
         }
     }
 
-    public static void quickSort(int[] arr) {
-        quickSort(arr, 0, arr.length - 1);
-
-    }
-
-    @Override
-    public void run()
-    {
-        quickSort(searchArray);
-    }
-
-    public static int divide(int[] arr, int left, int right) {
-        if (right < left) {
-            return -1;
-        }
-
-        int counter = left - 1;
-
-        for (int i = left; i <= right - 1; i++) {
-            if (arr[i] <= arr[right]) {
-                counter++;
-                swap(arr, counter, i);
-            }
-        }
-        swap(arr, (++counter), right);
-        return counter;
-
-    }
-
-    // Swaps two values of an array given the array and two indexes
-    private static void swap(int[] arr, int a, int b) {
-        int temp = arr[a];
-        arr[a] = arr[b];
-        arr[b] = temp;
-    }
-
-    // checks if a given array is sorted ascending
-    public static boolean isSortedAscending(int[] arr) {
-        for (int i = 0; i < arr.length - 1; i++) {
-            if (arr[i] > arr[i + 1]) {
-                return false;
-            }
-        }
-        return true;
-    }
-
-
-
-    //
-    public static Function<int[], Integer> quicksortTest = (arr) -> {
-        int[] arr2 = new int[arr.length];
-        for(int i = 0; i< arr.length; i++) {
-            arr[i] = (int) Math.floor(Math.random() * arr.length);
-        }
-        quickSort(arr2);
+    /**
+     * Only used for taking the Time it takes to perform a quicksort <p>
+     * Function called in TestAlgorithms
+     */
+    public static BiFunction<int[], SearchObject, Integer> searchTest = (arr, searchObject) -> {
+        quickSort(arr, searchObject.numberOfThreads);
         return -1;
-    };*/
+    };
 }
