@@ -30,7 +30,8 @@ public class UI extends JFrame {
      */
     public UI () {
         super("Search and Sort");
-
+        for ( int i = 0; i<6; i++)
+            TestAlgorithms.runTest();
 
         this.setLayout(new BorderLayout());
 

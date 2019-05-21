@@ -22,7 +22,7 @@ public class TestAlgorithms {
          * @return returns an ArrayList<Map<String, Long>> of all test results
          */
         public static ArrayList<Map<String, Long>> runTest() {
-                int[] arr = new int[60000];
+                int[] arr = new int[100000];
                 final int iterations = 100;
 
                 for (int i = 0; i < arr.length; i++) {
@@ -61,7 +61,7 @@ public class TestAlgorithms {
                 Map<String, Long> results7 = MapBauer(iterationresult);
 
                 iterationresult = new long[iterations];
-                copyArr = new int [60000];
+                copyArr = new int [100000];
 
                 for (int i = 0; i<iterations; i++) {
                         copyArr = Arrays.copyOf(arr, arr.length);
