@@ -1,10 +1,15 @@
 package oo.binarysearch;
 
+import app.SearchObject;
+import app.TestFunctionality;
+
+import java.util.function.BiFunction;
+
 /**
  * Binarysearch
  */
-class OOBinarySearch{
-    private int[] numbers;
+public class OOBinarySearch extends TestFunctionality {
+    private static int[] numbers;
 
     /**
      * numbersArray must be a sorted array!
@@ -19,10 +24,11 @@ class OOBinarySearch{
      * @param searchedNumber
      * @return index of the searched number in the array
      */
-    int searchNumber(int searchedNumber){
-        return searchNumberRekursiv(searchedNumber, 0,numbers.length);
+    static int searchNumber(int searchedNumber){
+        return searchNumberRekursiv(searchedNumber, 0,numbers.length-1);
     }
-    private int searchNumberRekursiv(int searchedNumber, int fromIndex, int toIndex){
+
+    private static int searchNumberRekursiv(int searchedNumber, int fromIndex, int toIndex){
         int middle = ((toIndex- fromIndex)/2) + fromIndex;
         if(fromIndex > toIndex){
             return -1;
@@ -35,4 +41,9 @@ class OOBinarySearch{
         else return -2;
     }
 
+    public static BiFunction<int[], SearchObject, Integer> binarysearchTest = (arr, searchObject) -> {
+        OOBinarySearch lOOBinarySearch = new OOBinarySearch(arr);
+        searchNumber(searchObject.search);
+        return -1;
+    };
 }
