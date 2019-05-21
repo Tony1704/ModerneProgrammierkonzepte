@@ -21,14 +21,14 @@ public class TestAlgorithms {
          * @return returns an ArrayList<Map<String, Long>> of all test results
          */
         public static ArrayList<Map<String, Long>> runTest() {
-                int[] arr = new int[600000];
-                final int iterations = 1000;
+                int[] arr = new int[10000];
+                final int iterations = 100;
 
                 for (int i = 0; i < arr.length; i++) {
-                        arr[i] = (int) Math.floor(Math.random() * arr.length + 1);
+                        arr[i] = (int) Math.floor(Math.random() * arr.length-1);
                 }
 
-                SearchObject searchObject = new SearchObject((int) Math.random() * arr.length, 10);
+                SearchObject searchObject = new SearchObject((int) Math.floor(Math.random() * arr.length -1), 10);
 
                 // How to call .test():
                 // int Array, int, SearchObject (Contains Search Element, Number of Threads),
@@ -50,7 +50,7 @@ public class TestAlgorithms {
                                 OOLinearSearchList.searchTest);
 
                 long [] iterationresult = new long[iterations];
-                int [] copyArr = new int [6000];
+                int [] copyArr = new int [10000];
 
                 for (int i = 0; i<iterations; i++) {
                         /*for (int j = 0; j < arr.length; j++) {
