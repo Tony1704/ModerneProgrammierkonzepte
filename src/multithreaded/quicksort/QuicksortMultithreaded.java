@@ -32,7 +32,7 @@ public class QuicksortMultithreaded extends TestFunctionality
      * Only used for taking the Time it takes to perform a quicksort <p>
      * Function called in TestAlgorithms
      */
-    public static BiFunction<int[], SearchObject, Integer> searchTest = (arr, searchObject) -> {
+    public static BiFunction<int[], SearchObject, Integer> quicksortTest = (arr, searchObject) -> {
         quickSort(arr, searchObject.numberOfThreads);
         return -1;
     };

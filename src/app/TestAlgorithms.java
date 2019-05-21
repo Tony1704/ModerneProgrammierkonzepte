@@ -9,6 +9,7 @@ import functional.linearsearch.index.FunctionalLinearSearchIndex;
 import functional.linearsearch.list.FunctionalLinearSearchList;
 import multithreaded.linearsearch.index.MultithreadedIndexLinearSearch;
 import multithreaded.linearsearch.list.MultithreadedListLinearSearch;
+import multithreaded.quicksort.QuicksortMultithreaded;
 import oo.binarysearch.OOBinarySearch;
 import oo.linearsearch.index.OOLinearSearchIndex;
 import oo.linearsearch.list.OOLinearSearchList;
@@ -21,7 +22,7 @@ public class TestAlgorithms {
          * @return returns an ArrayList<Map<String, Long>> of all test results
          */
         public static ArrayList<Map<String, Long>> runTest() {
-                int[] arr = new int[10000];
+                int[] arr = new int[60000];
                 final int iterations = 100;
 
                 for (int i = 0; i < arr.length; i++) {
@@ -50,19 +51,26 @@ public class TestAlgorithms {
                                 OOLinearSearchList.searchTest);
 
                 long [] iterationresult = new long[iterations];
-                int [] copyArr = new int [10000];
+                int [] copyArr = new int [500000];
 
                 for (int i = 0; i<iterations; i++) {
-                        /*for (int j = 0; j < arr.length; j++) {
-                                arr[j] = (int) Math.floor(Math.random() * arr.length + 1);
-                        }*/
                         copyArr = Arrays.copyOf(arr, arr.length);
                         Map<String, Long> iteratormap = OOQuicksort.test(copyArr, 1, searchObject, OOQuicksort.quicksortTest);
                         iterationresult[i] = iteratormap.get("total_time");
                 }
                 Map<String, Long> results7 = MapBauer(iterationresult);
 
-                Map<String, Long> results8 = OOBinarySearch.test(arr, iterations, searchObject, OOBinarySearch.binarysearchTest);
+                iterationresult = new long[iterations];
+                copyArr = new int [60000];
+
+                for (int i = 0; i<iterations; i++) {
+                        copyArr = Arrays.copyOf(arr, arr.length);
+                        Map<String, Long> iteratormap = OOQuicksort.test(copyArr, 1, searchObject, QuicksortMultithreaded.quicksortTest);
+                        iterationresult[i] = iteratormap.get("total_time");
+                }
+                Map<String, Long> results8 = MapBauer(iterationresult);
+
+                Map<String, Long> results9 = OOBinarySearch.test(arr, iterations, searchObject, OOBinarySearch.binarysearchTest);
 
                 ArrayList<Map<String, Long>> list = new ArrayList<>();
                 list.add(results1);
@@ -73,6 +81,7 @@ public class TestAlgorithms {
                 list.add(results6);
                 list.add(results7);
                 list.add(results8);
+                list.add(results9);
 
                 return list;
         }

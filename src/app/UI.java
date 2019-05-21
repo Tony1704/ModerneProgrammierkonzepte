@@ -19,7 +19,7 @@ public class UI extends JFrame {
     // Border
     Border border = BorderFactory.createEtchedBorder();
     Border border_search = BorderFactory.createTitledBorder(border, "Linear Search");
-    Border border_sort = BorderFactory.createTitledBorder(border, "QuickSort + Binary Search");
+    Border border_sort = BorderFactory.createTitledBorder(border, "Quick Sort + Binary Search");
 
     //private static final long serialVersionUID = 1L;
 
@@ -57,7 +57,7 @@ public class UI extends JFrame {
         btn_run.addActionListener(buttonListener);
         btn_cancel.addActionListener(buttonListener);
 
-        Integer allTimes [] = new Integer[30];
+        Integer allTimes [] = new Integer[27];
 
         for (int i = 0; i<allTimes.length; i++ ) {
             allTimes[i] = -1;
@@ -153,8 +153,8 @@ public class UI extends JFrame {
 
 
         // right center panel == QuickSort + Binary Search
-        JLabel OOQuicksort = new JLabel("Object Oriented Quicksort: ");
-        JLabel MultithreadedBinarysearch = new JLabel("Multithreaded BinarySearch: ");
+        JLabel OOQuicksort = new JLabel("Object Oriented Quick Sort: ");
+        JLabel MultithreadedBinarysearch = new JLabel("Multithreaded Quick Sort: ");
         JLabel OOBinarysearch = new JLabel("Object Oriented BinarySearch: ");
 
         // Time labels
@@ -275,7 +275,7 @@ public class UI extends JFrame {
         btn_run.addActionListener(buttonListener);
         btn_cancel.addActionListener(buttonListener);
 
-        Long [] allTimes = new Long[24];
+        Long [] allTimes = new Long[27];
         int i = 0;
 
         if (list != null) {
@@ -387,8 +387,8 @@ public class UI extends JFrame {
         panel_search.add(time53);
 
         // right center panel == QuickSort + Binary Search
-        JLabel OOQuicksort = new JLabel("Object Oriented Quicksort: ");
-        JLabel MultithreadedBinarysearch = new JLabel("Multithreaded BinarySearch: ");
+        JLabel OOQuicksort = new JLabel("Object Oriented Quick Sort: ");
+        JLabel MultithreadedBinarysearch = new JLabel("Multithreaded Quick Sort: ");
         JLabel OOBinarysearch = new JLabel("Object Oriented BinarySearch: ");
 
         // Time labels
@@ -401,9 +401,9 @@ public class UI extends JFrame {
         JLabel time72 = new JLabel(allTimes[22].toString());
         JLabel time73 = new JLabel(allTimes[23].toString());
         // Object Oriented BinarySearch
-//        JLabel time81 = new JLabel(allTimes[24].toString());
-//        JLabel time82 = new JLabel(allTimes[25].toString());
-//        JLabel time83 = new JLabel(allTimes[26].toString());
+        JLabel time81 = new JLabel(allTimes[24].toString());
+        JLabel time82 = new JLabel(allTimes[25].toString());
+        JLabel time83 = new JLabel(allTimes[26].toString());
 
         JLabel name1 = new JLabel("Name");
         JLabel max1 = new JLabel("Max Time");
@@ -423,9 +423,9 @@ public class UI extends JFrame {
         panel_sort.add(time72);
         panel_sort.add(time73);
         panel_sort.add(OOBinarysearch);
-//        panel_sort.add(time81);
-//        panel_sort.add(time82);
-//        panel_sort.add(time83);
+        panel_sort.add(time81);
+        panel_sort.add(time82);
+        panel_sort.add(time83);
 
         // Time label style
         name.setHorizontalAlignment(JLabel.CENTER);
@@ -463,9 +463,9 @@ public class UI extends JFrame {
         time71.setHorizontalAlignment(JLabel.RIGHT);
         time72.setHorizontalAlignment(JLabel.RIGHT);
         time73.setHorizontalAlignment(JLabel.RIGHT);
-//        time81.setHorizontalAlignment(JLabel.RIGHT);
-//        time82.setHorizontalAlignment(JLabel.RIGHT);
-//        time83.setHorizontalAlignment(JLabel.RIGHT);
+        time81.setHorizontalAlignment(JLabel.RIGHT);
+        time82.setHorizontalAlignment(JLabel.RIGHT);
+        time83.setHorizontalAlignment(JLabel.RIGHT);
 
         // Configuration Frame
         this.add(panel_top, BorderLayout.NORTH);
