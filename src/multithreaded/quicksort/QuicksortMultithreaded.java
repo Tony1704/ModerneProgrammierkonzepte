@@ -29,7 +29,7 @@ public class QuicksortMultithreaded extends TestFunctionality
     }
 
     /**
-     * Only used for taking the Time it takes to perform a quicksort <p>
+     * Only used for taking the time it takes to perform a quicksort
      * Function called in TestAlgorithms
      */
     public static BiFunction<int[], SearchObject, Integer> quicksortTest = (arr, searchObject) -> {

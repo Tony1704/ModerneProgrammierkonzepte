@@ -12,8 +12,8 @@ public class OOBinarySearch extends TestFunctionality {
     private static int[] numbers;
 
     /**
-     * numbersArray must be a sorted array!
-     * @param numbersArray
+     * Constructor Method for BinarySearch
+     * @param numbersArray numbersArray must be a sorted array!
      */
     OOBinarySearch(int[] numbersArray){
         numbers = numbersArray;

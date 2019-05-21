@@ -47,7 +47,7 @@ public class Sorter implements Runnable
     }
 
     /**
-     * The main sort Method
+     * The main sort method
      * @param left
      * @param right
      */

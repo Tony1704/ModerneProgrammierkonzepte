@@ -7,6 +7,13 @@ import app.TestFunctionality;
 
 public class MultithreadedListLinearSearch extends TestFunctionality
 {
+    /**
+     * Search function of linear search multithreaded
+     * @param pSearchArray Array to be searched
+     * @param pSearchElement Element to be found
+     * @param pThreads Threads to be used
+     * @return returns index of element if found. If the Element is not in the array, return is -1.
+     */
     public List<Integer> search(int[] pSearchArray, int pSearchElement, int pThreads)
     {
         Thread[] lThreadArray = new Thread[pThreads];
@@ -40,7 +47,11 @@ public class MultithreadedListLinearSearch extends TestFunctionality
 
         return lLinearSearcherArray[0].getIndexList();
     }
-
+    /**
+     * Determines the readiness states of all the threads
+     * @param pSearcher array of threads
+     * @return returns readiness state of arrays
+     */
     private boolean threadsReady(LinearSearcherThread[] pSearcher) {
         for (int j = 0; j < pSearcher.length; j++) {
             if (!pSearcher[j].isReady()) {

@@ -9,12 +9,12 @@ public class SearchObject {
 
     /**
      * Creates a SearchObject that can be passed to a BiFunction to run tests 
-     * @param search int containing the search Integer used for testing search Algorithms
-     * @param numberOfThreads
+     * @param search int containing the search integer used for testing search algorithms
+     * @param numberOfThreads number of threads being used for testing
      */
     public SearchObject(int search, int numberOfThreads) {
         this.search = search;
         this.numberOfThreads = numberOfThreads;
     }
-    
+
 }
