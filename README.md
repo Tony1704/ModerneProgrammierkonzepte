@@ -26,6 +26,11 @@ Project by Marcel Mertens, Anton Ochel, Tizian Groß, Tristan Emig & Benno Grimm
 * Not every search algorithm can be implemented in a functional way
   * For some, it does not even make sense -> recursive algorithms
 * Multithreaded programming produces a lot of unecessary overhead
+
+### Problems and fixes
+* In an earlier version, the first results were higher than the results after restarting the tests (while the application is still open)
+  * This was due to the cache memory and page tables that adjust over time to the running processes
+    * This was fixed by running through the test 6 times before showing the first test results -> this results in a longer loading time at first
   
 ## Explaining the results
 
@@ -39,3 +44,6 @@ This can be explained. The object oriented functions have direct acceess to the 
 
 ### Linear Search vs. Quick Sort + Binary Search
 Now, when we look at our main objective of this project, we can see that the QuickSort + BinarySearch method is performing way better than all the other options. Especially binary search is incredibly fast, outperforming any other search algorithm by at least 2 times. This result, of course, is only representative to the specific parameters applied here. Changing the number of searched numbers and the size of the array will change the results drastically and may give a different algorithm the best performance.  
+
+----
+©Multiflex KG
