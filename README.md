@@ -11,5 +11,27 @@ Project by Marcel Mertens, Anton Ochel, Tizian Groß, Tristan Emig & Benno Grimm
 * 4 search algorithms and 2 sort & search algorithms can be compared
   * each of the algorithms returns a minimum time, a maximum time and an average time
 * every algorithm is tested
-  * the test consist of a 10000 element array where one specific number has to be found
+  * the test consist of a 10000 element array where one random specific number has to be found
     * it is repeated 100 times to get the test results
+    
+## Structure
+
+
+## Developement
+
+### What we found out
+* Not every search algorithm can be implemented in a functional way
+  * For some, it does not even make sense -> recursive algorithms
+  
+## Explaining the results
+
+### Searching by Index vs. Searching by List
+When comparing all the algorithms by their output logic, it is easy to see that in almost all cases, the index search is faster; up to 2 times.
+This only makes sense when you look at the structure of the algorithm. When you only search for the index, the search process is stopped after the first matched result is found. With the list, every matched result is being extracted from the array, subsequently, the whole array is being run through. This also explains their min and max times being closer together in some cases. Furthermore, the list functions have to manage a seperate list, which also slows them down.
+
+### Functional vs. Multithreaded vs. Object Oriented
+When comparing all the algorithms by their internal logic, the results are unanimous: object oriented is the fastest, functional takes the second place and multithreaded is the lowest by a big margin.
+This can be explained. The object oriented functions have direct acceess to the array which greatly reduces their time to get a number to compare it, while the functional functions have to work with the stream. The multithreaded functions are by far the slowest because their massive overhead and management impairs their performance.
+
+### Linear Search vs. Quick Sort + Binary Search
+Now when we look at our main objective of this project, we can see that the QuickSort + BinarySearch method is performing way better than all the other options. Especially binary search is incredibly fast, outperforming any other search algorithm by at least 2 times. This result, of course, is only representative to the specific parameters applied here. Changing the number of searched numbers and the size of the array will change the results drastically and may give a different algorithm the best performance.  
