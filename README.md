@@ -17,7 +17,7 @@ Project by Marcel Mertens, Anton Ochel, Tizian Groß, Tristan Emig & Benno Grimm
 ## Structure
 * Every category has its own package
 * Every algorithm is its own class
-* The UI starts every class with a test function that is implementet through an abstract class
+* The UI starts every class with a test function that is implementet by using an abstract class
 * The results are then displayed
 
 ## Developement
